@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     bool movingRight = false;
     bool movingLeft = false;
 
-    Vector2 firstTouch, lastTouch;
+    Vector2 firstTouch;
 
     private void Start()
     {
@@ -97,8 +97,9 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsGrounded()
     {
+        jumped = false;
         RaycastHit2D Hitinfo = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, 0.1f, groundLayer);
-        return Hitinfo.collider != null;
+        return Hitinfo.collider != null;   
     }
     private void Jump()
     {
