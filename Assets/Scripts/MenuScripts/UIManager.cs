@@ -6,49 +6,95 @@ using DG.Tweening;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] private RectTransform mainMenu, creditsMenu, optionsMenu, startMenu;
+    [SerializeField] private RectTransform mainPanel, creditsPanel, optionsPanel, startPanel, eulaPanel, shopPanel, missionsPanel, reportPanel, scorePanel;
 
     void Start()
     {
-        mainMenu.DOAnchorPos(Vector2.zero, 0.5f);
+        mainPanel.DOAnchorPos(Vector2.zero, 0.5f);
     }
     public void StartButton()
     {
-        mainMenu.DOAnchorPos(new Vector2(0, 1100), 0.5f);
-        startMenu.DOAnchorPos(new Vector2(0, 0), 0.5f);
+        mainPanel.DOAnchorPos(new Vector2(-1920, 0), 0.5f);
+        startPanel.DOAnchorPos(new Vector2(0, 0), 0.5f);
     }
 
     public void StartButtonExit()
     {
-        startMenu.DOAnchorPos(new Vector2(2000, 0), 0.5f);
-        mainMenu.DOAnchorPos(new Vector2(0, 0), 0.5f);
+        startPanel.DOAnchorPos(new Vector2(1920, 0), 0.5f);
+        mainPanel.DOAnchorPos(new Vector2(0, 0), 0.5f);
     }
 
     public void CreditsButton()
     {
-        mainMenu.DOAnchorPos(new Vector2(0, 1100), 0.5f);
-        creditsMenu.DOAnchorPos(new Vector2(0, 0), 0.5f);
+        mainPanel.DOAnchorPos(new Vector2(1920, 0), 0.5f);
+        creditsPanel.DOAnchorPos(new Vector2(0, 0), 0.5f);
     }
 
     public void CreditsButtonExit()
     {
-        creditsMenu.DOAnchorPos(new Vector2(-2000, 0), 0.5f);
-        mainMenu.DOAnchorPos(new Vector2(0, 0), 0.5f);
+        creditsPanel.DOAnchorPos(new Vector2(-1920, 0), 0.5f);
+        mainPanel.DOAnchorPos(new Vector2(0, 0), 0.5f);
     }
 
     public void OptionsButton()
     {
-        mainMenu.DOAnchorPos(new Vector2(0, 1100), 0.5f);
-        optionsMenu.DOAnchorPos(new Vector2(0, 0), 0.5f);
+        mainPanel.DOAnchorPos(new Vector2(0, 1100), 0.5f);
+        optionsPanel.DOAnchorPos(new Vector2(0, 0), 0.5f);
     }
 
     public void OptionsButtonExit()
     {
-        optionsMenu.DOAnchorPos(new Vector2(0, -1100), 0.5f);
-        mainMenu.DOAnchorPos(new Vector2(0, 0), 0.5f);
+        optionsPanel.DOAnchorPos(new Vector2(0, -1100), 0.5f);
+        mainPanel.DOAnchorPos(new Vector2(0, 0), 0.5f);
     }
 
+    public void EulaButton()
+    {
+        eulaPanel.DOAnchorPos(new Vector2(0, 0), 1f);
+    }
 
+    public void EulaButtonExit()
+    {
+        eulaPanel.DOAnchorPos(new Vector2(0, 2000), 1f);
+    }
 
+    public void ShopButton()
+    {
+        shopPanel.DOAnchorPos(new Vector2(0, 0), 1f);
+    }
 
+    public void ShopButtonExit()
+    {
+        shopPanel.DOAnchorPos(new Vector2(0, 2000), 1f);
+    }
+
+    public void MissionButton()
+    {
+        missionsPanel.DOAnchorPos(new Vector2(0, 0), 1f);
+    }
+
+    public void MissionButtonExit()
+    {
+        missionsPanel.DOAnchorPos(new Vector2(0, 2000), 1f);
+    }
+
+    public void ReportButton()
+    {
+        reportPanel.DOAnchorPos(new Vector2(0, 0), 1f);
+    }
+
+    public void ReportButtonExit()
+    {
+        reportPanel.DOAnchorPos(new Vector2(0, 2000), 1f);
+    }
+
+    public void ScoreButton()
+    {
+        scorePanel.DOAnchorPos(new Vector2(0, 0), 1f);
+    }
+
+    public void ScoreButtonExit()
+    {
+        scorePanel.DOAnchorPos(new Vector2(0, 2000), 1f);
+    }
 }
