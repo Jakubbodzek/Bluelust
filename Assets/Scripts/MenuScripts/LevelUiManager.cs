@@ -8,9 +8,11 @@ using System;
 public class LevelUiManager : MonoBehaviour
 {
 
-    [SerializeField] private RectTransform theBeginning, noExit, blueDesire;
+    [SerializeField] private RectTransform theBeginning, noExit, blueDesire, hellishRebirth, finalRage;
 
-    int menus = 3;
+    [SerializeField] private Button leftButton, rightButton;
+
+    int menus = 5;
     int currentMenu = 0;
     private float diff = 2000f;
 
@@ -23,6 +25,8 @@ public class LevelUiManager : MonoBehaviour
         theBeginning.DOAnchorPos(new Vector3(theBeginning.anchoredPosition.x + diff, 0), 1f);
         noExit.DOAnchorPos(new Vector3(noExit.anchoredPosition.x + diff, 0), 1f);
         blueDesire.DOAnchorPos(new Vector3(blueDesire.anchoredPosition.x + diff, 0), 1f);
+        hellishRebirth.DOAnchorPos(new Vector3(hellishRebirth.anchoredPosition.x + diff, 0), 1f);
+        finalRage.DOAnchorPos(new Vector3(finalRage.anchoredPosition.x + diff, 0), 1f);
     }
 
     public void RightButton()
@@ -34,6 +38,23 @@ public class LevelUiManager : MonoBehaviour
         theBeginning.DOAnchorPos(new Vector3(theBeginning.anchoredPosition.x - diff, 0), 1f);
         noExit.DOAnchorPos(new Vector3(noExit.anchoredPosition.x - diff, 0), 1f);
         blueDesire.DOAnchorPos(new Vector3(blueDesire.anchoredPosition.x - diff, 0), 1f);
+        hellishRebirth.DOAnchorPos(new Vector3(hellishRebirth.anchoredPosition.x - diff, 0), 1f);
+        finalRage.DOAnchorPos(new Vector3(finalRage.anchoredPosition.x - diff, 0), 1f);
+    }
+
+
+
+    public void StartTimer() //Call this from OnClick
+    {
+        StartCoroutine(TimeoutEndTurnButton());
+    }
+    IEnumerator TimeoutEndTurnButton()
+    {
+        leftButton.interactable = false;
+        rightButton.interactable = false;
+        yield return new WaitForSeconds(1f);
+        leftButton.interactable = true;
+        rightButton.interactable = true;
     }
 
     #region Unused
