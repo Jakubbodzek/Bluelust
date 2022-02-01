@@ -6359,6 +6359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   portal: {fileID: 1794145092}
+  victoryPanel: {fileID: 24630598}
   animDuration: 1
 --- !u!222 &7788175005062722541
 CanvasRenderer:
