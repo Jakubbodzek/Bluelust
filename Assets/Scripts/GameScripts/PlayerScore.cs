@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerScore : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI myText;
-    public int score = 0;
+    [SerializeField] private TextMeshProUGUI myScore;
+    [SerializeField] private int score = 0;
 
     public void Start()
     {
-        myText.text = "Score: 0";
+        myScore.text = "Score: 0";
     }
 
 
@@ -18,7 +19,7 @@ public class PlayerScore : MonoBehaviour
     {
         if (other.CompareTag("Diamond"))
         {
-            myText.text = "Score: " + ++score;
+            myScore.text = "Score: " + ++score;
             Destroy(other.gameObject);
         }
     }
