@@ -16,7 +16,7 @@ public class LevelUiManager : MonoBehaviour
     int currentMenu = 0;
     private float diff = 2000f;
 
-    public void LeftButton()
+    public void RightButton()
     {
         if (currentMenu == 0)
             return;
@@ -29,7 +29,7 @@ public class LevelUiManager : MonoBehaviour
         finalRage.DOAnchorPos(new Vector3(finalRage.anchoredPosition.x + diff, 0), 1f);
     }
 
-    public void RightButton()
+    public void LeftButton()
     {
         if (currentMenu == menus - 1)
             return;
