@@ -4,11 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 
-public class GroundMovement : MonoBehaviour
+public class GroundAnimations : MonoBehaviour
 {
 
-    [SerializeField] private Transform ground4;
-    [SerializeField] private Transform ground7;
+    [SerializeField] private Transform ground4, ground7;
     [SerializeField] private float animDuration;
     private void Start()
     {
