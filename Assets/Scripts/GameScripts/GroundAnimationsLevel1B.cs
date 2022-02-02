@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 
-public class GroundAnimations : MonoBehaviour
+public class GroundAnimationsLevel1B : MonoBehaviour
 {
 
     [SerializeField] private Transform ground4, ground7;
