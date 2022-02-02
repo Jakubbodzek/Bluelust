@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using DG.Tweening;
 using UnityEngine.SceneManagement;
 
-public class PortalScriptLevel1B : MonoBehaviour
+public class PortalScript : MonoBehaviour
 {
 
     [SerializeField] private Transform portal;
