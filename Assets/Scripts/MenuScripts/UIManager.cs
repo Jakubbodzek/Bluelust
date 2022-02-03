@@ -7,7 +7,6 @@ using DG.Tweening;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private RectTransform mainPanel, creditsPanel, optionsPanel, startPanel, eulaPanel, shopPanel, missionsPanel, reportPanel, scorePanel;
-
     void Start()
     {
         mainPanel.DOAnchorPos(Vector2.zero, 0.5f);
@@ -38,14 +37,14 @@ public class UIManager : MonoBehaviour
 
     public void OptionsButton()
     {
-        mainPanel.DOAnchorPos(new Vector2(0, 1100), 0.5f);
-        optionsPanel.DOAnchorPos(new Vector2(0, 0), 0.5f);
+        mainPanel.DOAnchorPos(new Vector2(0, 1100), 0.3f);
+        optionsPanel.DOAnchorPos(new Vector2(0, 0), 0.3f);
     }
 
     public void OptionsButtonExit()
     {
-        optionsPanel.DOAnchorPos(new Vector2(0, -1100), 0.5f);
-        mainPanel.DOAnchorPos(new Vector2(0, 0), 0.5f);
+        optionsPanel.DOAnchorPos(new Vector2(0, -1100), 0.3f);
+        mainPanel.DOAnchorPos(new Vector2(0, 0), 0.3f);
     }
 
     public void EulaButton()

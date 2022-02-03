@@ -23,4 +23,9 @@ public class SocialLinks : MonoBehaviour
     {
         Application.OpenURL("https://discord.gg/CThKykdhu2");
     }
+
+    public void OpenDataPrivacy()
+    {
+        Application.OpenURL("https://dataoptout-ui-prd.uca.cloud.unity3d.com/?token=jqsbknglovp1ms94usf2ehus9k09ov61dk39nad8jae7bksh");
+    }
 }
