@@ -14,7 +14,7 @@ public class DiamondsAnimationsLevel2B : MonoBehaviour
     {
         d1.DOMoveY(3.8f, animDuration).SetLoops(-1, LoopType.Yoyo);
         d2.DOMoveY(7.8f, animDuration).SetLoops(-1, LoopType.Yoyo);
-        d3.DOMoveY(24.8f, animDuration).SetLoops(-1, LoopType.Yoyo);
+        d3.DOMoveY(19.8f, animDuration).SetLoops(-1, LoopType.Yoyo);
         d4.DOMoveY(24.8f, animDuration).SetLoops(-1, LoopType.Yoyo);
     }
 }

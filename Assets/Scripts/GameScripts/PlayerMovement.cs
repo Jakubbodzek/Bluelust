@@ -33,9 +33,9 @@ public class PlayerMovement : MonoBehaviour
         for (int i = 0; i < Input.touchCount; i++)
         {
             Vector3 TouchPos = Input.touches[i].position;
-            if(TouchPos.x < width)
+            if (TouchPos.x < width)
             {
-                if(TouchPos.x < width / 4 && TouchPos.y < Screen.height / 4)
+                if (TouchPos.x < width / 4 && TouchPos.y < Screen.height / 4)
                 {
                     movingLeft = true;
                     if (Input.touches[i].phase.Equals(TouchPhase.Ended))
@@ -43,25 +43,25 @@ public class PlayerMovement : MonoBehaviour
                         movingLeft = false;
                     }
                 }
-                if(TouchPos.x > width / 4 && TouchPos.y < Screen.height / 4)
+                if (TouchPos.x > width / 4 && TouchPos.y < Screen.height / 4)
                 {
                     movingRight = true;
-                    if(Input.touches[i].phase.Equals(TouchPhase.Ended))
+                    if (Input.touches[i].phase.Equals(TouchPhase.Ended))
                     {
                         movingRight = false;
                     }
                 }
             }
-            if(TouchPos.x > width)
+            if (TouchPos.x > width)
             {
-                if(Input.touches[i].phase.Equals(TouchPhase.Began))
+                if (Input.touches[i].phase.Equals(TouchPhase.Began))
                 {
                     firstTouch = Input.touches[i].position;
                 }
-                if(Input.touches[i].phase.Equals(TouchPhase.Moved))
+                if (Input.touches[i].phase.Equals(TouchPhase.Moved))
                 {
                     Vector3 Direction = Input.touches[i].position - firstTouch;
-                    if(Direction.y > 0)
+                    if (Direction.y > 0)
                     {
                         Jump();
                     }
@@ -72,22 +72,22 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(jumped && jumpCount > 0)
+        if (jumped && jumpCount > 0)
         {
             rigidBody.velocity = Vector2.up * jumpForce;
             jumped = false;
         }
-        if(IsGrounded())
+        if (IsGrounded())
         {
             jumpCount = 2;
         }
-        if(movingRight)
+        if (movingRight)
         {
             rigidBody.transform.position += Vector3.right * playerSpeed * Time.fixedDeltaTime;
             movingRight = false;
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
-        if(movingLeft)
+        if (movingLeft)
         {
             rigidBody.transform.position += Vector3.left * playerSpeed * Time.fixedDeltaTime;
             movingLeft = false;
@@ -99,12 +99,11 @@ public class PlayerMovement : MonoBehaviour
     {
         jumped = false;
         RaycastHit2D Hitinfo = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, 0.1f, groundLayer);
-        return Hitinfo.collider != null;   
+        return Hitinfo.collider != null;
     }
     private void Jump()
     {
         jumped = true;
         jumpCount--;
     }
-
 }

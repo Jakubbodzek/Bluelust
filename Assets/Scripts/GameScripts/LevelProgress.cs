@@ -35,7 +35,7 @@ public class LevelProgress : MonoBehaviour
         if (player.position.y <= portalPosition.y)
         {
             float newDistance = PortalDistance();
-            float progressValue = Mathf.InverseLerp(distanceToPortal, 1.1f, newDistance);
+            float progressValue = Mathf.InverseLerp(distanceToPortal, 2f, newDistance);
 
             UpdateProgressBar(progressValue);
         }
