@@ -3518,8 +3518,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   d1: {fileID: 1215023823}
   d2: {fileID: 863270198}
-  d3: {fileID: 298544032}
-  d4: {fileID: 1498262228}
+  d3: {fileID: 1498262228}
+  d4: {fileID: 298544032}
   animDuration: 0.5
 --- !u!1 &1304937171
 GameObject:
