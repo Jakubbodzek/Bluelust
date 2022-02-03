@@ -11,14 +11,6 @@ public class PortalScript : MonoBehaviour
     [SerializeField] private Transform portal;
     [SerializeField] private float animDuration;
 
-    private void Awake()
-    {
-        if(!PlayerPrefs.HasKey("levelReached") || PlayerPrefs.GetInt("levelReached") != 25)
-        {
-            PlayerPrefs.SetInt("levelReached", 1);
-            PlayerPrefs.Save();
-        }
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Portal"))
@@ -39,13 +31,12 @@ public class PortalScript : MonoBehaviour
     //Fix portal bug (unlocks all levels...)
     public void NextLevel()
     {
-        StartCoroutine(Level1BFinished());
+        StartCoroutine(LevelFinished());
     }
-    IEnumerator Level1BFinished()
+    IEnumerator LevelFinished()
     {
-
         yield return new WaitForSeconds(1.1f);
-        //PlayerPrefs.SetInt("levelReached", PlayerPrefs.GetInt("levelReached") + 1);
+        PlayerPrefs.SetInt("levelReached", PlayerPrefs.GetInt("levelReached") + 1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

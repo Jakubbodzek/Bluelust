@@ -13,13 +13,13 @@ public class LevelManager : MonoBehaviour
     private void Awake()
     {
         int levelReached = PlayerPrefs.GetInt("levelReached", 1);
-        if (PlayerPrefs.GetInt("Level") >= 1)
+        if (PlayerPrefs.GetInt("levelReached") >= 1)
         {
-            levelReached = PlayerPrefs.GetInt("Level");
+            levelReached = PlayerPrefs.GetInt("levelReached");
         }
         for (int i = 0; i < levelButton.Length; i++)
         {
-            if (i + 2 > levelReached)
+            if (i + 1 > levelReached)
             {
                 levelButton[i].interactable = false;
             }
