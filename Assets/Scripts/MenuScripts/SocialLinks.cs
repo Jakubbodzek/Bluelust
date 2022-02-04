@@ -9,9 +9,9 @@ public class SocialLinks : MonoBehaviour
         Application.OpenURL("https://www.linkedin.com/in/jakub-bodzek-7520881a4/");
     }
 
-    public void OpenGitHub()
+    public void OpenYoutube()
     {
-        Application.OpenURL("https://github.com/Jakubbodzek");
+        Application.OpenURL("https://www.youtube.com/channel/UCabGb6WfCku5XEeZfriPoHA");
     }
 
     public void OpenTrello()
