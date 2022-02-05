@@ -35,17 +35,17 @@ public class UIManager : MonoBehaviour
         mainPanel.DOAnchorPos(new Vector2(0, 0), 0.5f);
     }
 
-    public void OptionsButton()
-    {
-        mainPanel.DOAnchorPos(new Vector2(0, 1100), 0.3f);
-        optionsPanel.DOAnchorPos(new Vector2(0, 0), 0.3f);
-    }
+    //public void OptionsButton()
+    //{
+    //    mainPanel.DOAnchorPos(new Vector2(0, 1100), 0.3f);
+    //    optionsPanel.DOAnchorPos(new Vector2(0, 0), 0.3f);
+    //}
 
-    public void OptionsButtonExit()
-    {
-        optionsPanel.DOAnchorPos(new Vector2(0, -1100), 0.3f);
-        mainPanel.DOAnchorPos(new Vector2(0, 0), 0.3f);
-    }
+    //public void OptionsButtonExit()
+    //{
+    //    optionsPanel.DOAnchorPos(new Vector2(0, -1100), 0.3f);
+    //    mainPanel.DOAnchorPos(new Vector2(0, 0), 0.3f);
+    //}
 
     public void EulaButton()
     {
@@ -95,5 +95,15 @@ public class UIManager : MonoBehaviour
     public void ScoreButtonExit()
     {
         scorePanel.DOAnchorPos(new Vector2(0, 2000), 1f);
+    }
+
+    public void OptionsButton()
+    {
+        optionsPanel.DOAnchorPos(new Vector2(0, 0), 1f);
+    }
+
+    public void OptionsButtonExit()
+    {
+        optionsPanel.DOAnchorPos(new Vector2(0, 2000), 1f);
     }
 }
