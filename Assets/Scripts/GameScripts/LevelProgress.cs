@@ -20,8 +20,8 @@ public class LevelProgress : MonoBehaviour
 
     private float PortalDistance()
     {
-        //return Vector3.Distance (player.position, portalPosition) ;
-        return (portalPosition - player.position).sqrMagnitude;
+        return Vector3.Distance (player.position, portalPosition);
+        //return (portalPosition - player.position).sqrMagnitude;
     }
 
 
